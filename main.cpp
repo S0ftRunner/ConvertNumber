@@ -38,7 +38,7 @@ int main()
     return 0;
 }
 //----------------------
-int ConvertBinaryToDec(int number)
+int ConvertBinaryToDec(int number) // перевод из двоичного в десятичный
 {
     int DecimalNumber = 0, i = 0, remainder;
 
@@ -53,17 +53,17 @@ int ConvertBinaryToDec(int number)
     return DecimalNumber;
 }
 //----------------------
-int ConvertDecToBinary(int number)
+int ConvertDecToBinary(int number) // перевод из десятичного в двоичный
 {
     int BinaryNumber = 0;
     int remainder, i = 1, step = 1;
 
     while (number != 0)
     {
-        remainder = number % 2;
-        cout << "Шаг: " << step++ << ' ' << number << "/2, Остаток = " << remainder << ", Quotient = " << number /2 << "\n";
-        number /= 2;
-        BinaryNumber += remainder * i;
+        remainder = number % 2; // берем остаток от деления на двойку
+        cout << "Шаг: " << step++ << ' ' << number << "/2, Остаток = " << remainder << ", Quotient = " << number / 2 << "\n";
+        number /= 2; // делим наше число пополам
+        BinaryNumber += remainder * i; // остаток умножаем на i
         i *= 10;
     }
 
