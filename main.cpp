@@ -8,6 +8,7 @@ int ConvertDecToBinary(int number);
 int main()
 {
     setlocale(LC_ALL, "ru"); //
+    cout << "Салам алекум!\n";
     int number; // вводимое число
     char switcher; // переключатель
 
